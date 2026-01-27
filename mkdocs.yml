@@ -1,0 +1,128 @@
+# Project Information
+site_name: Unity 6 Tutorials
+site_url: https://SBUplakankus.github.io/unity-6-tutorials/
+site_author: Seán Burke
+site_description: >-
+  Learn intermediate level Design Patterns and architecture choices
+  to develop better games in Unity 6
+
+# Repository
+repo_name: Tutorial Repo
+repo_url: https://github.com/SBUplakankus/unity-6-tutorials
+
+# Copyright
+copyright: Copyright &copy; 2026 Massive Melt Media
+
+# Configuration
+theme:
+  icon:
+    repo: fontawesome/brands/github
+  name: material
+  favicon: images/Gamepad_T.svg
+  logo: images/Gamepad_W_F.svg
+  font:
+    text: Inter
+  features:
+    - navigation.instant
+    - navigation.path
+    - navigation.expand
+    - navigation.top
+    - navigation.footer
+    - content.code.copy
+    - content.tabs.link
+  
+  palette:
+    - scheme: slate           # dark mode
+      primary: teal           # main color for headers, buttons
+      accent: teal            # accent color for links, highlights
+      toggle:
+        icon: material/weather-sunny
+        name: Light mode
+    - scheme: default         # optional light mode
+      primary: teal
+      accent: teal
+      toggle:
+        icon: material/weather-night
+        name: Dark mode
+    
+# Additional Configuration
+extra:
+  social:
+    - icon: fontawesome/brands/bluesky
+      link: https://bsky.app/profile/massivemeltmedia.bsky.social
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/@MassiveMeltMedia
+    - icon: fontawesome/brands/itch-io
+      link: https://massivemeltmedia.itch.io/
+    - icon: fontawesome/brands/discord
+      link: discord.gg/nQpVmHse2U
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/company/massive-melt-media/
+  
+# Extensions
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      normalize_issue_symbols: true
+      repo_url_shorthand: true
+      user: squidfunk
+      repo: mkdocs-material
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets:
+      auto_append:
+        - includes/mkdocs.md
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+      combine_header_slug: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+# Page Tree
+nav:
+  - Home: index.md
+  - Optimisation Methods:
+      - Overview: optimisation/optimisation-methods.md
+      - Update Manager: optimisation/update-manager.md
+      - Object Pooling: optimisation/object-pooling.md
+  - Design Patterns:
+      - Overview: design-patterns/design-patterns.md
+      - Observer: design-patterns/observer.md
+      - Strategy: design-patterns/strategy.md
+  - User Interface:
+      - Overview: ui/user-interface.md
+      - Tweening: ui/tweening.md
+      - UI Toolkit: ui/uitk.md
+  - Gameplay Systems:
+      - Overview: gameplay/gameplay-systems.md
