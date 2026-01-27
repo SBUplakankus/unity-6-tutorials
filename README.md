@@ -8,7 +8,7 @@ Welcome to **Massive Melt Media Unity 6 Tutorials Repository.**
 - Full **written explanations, examples, and code snippets** on the website
 - Updated weekly with new tutorials and resources
 
-Visit the **[website](https://SBUplakankus.github.io/MMM_Unity_6.3_Tutorials/)** for the full tutorial experience.
+Visit the **[website](https://sbuplakankus.github.io/unity-6-tutorials/)** for the full tutorial experience.
 
 ---
 
