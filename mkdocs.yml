@@ -58,6 +58,10 @@ extra:
       link: discord.gg/nQpVmHse2U
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/company/massive-melt-media/
+      
+extra_css:
+  - stylesheets/extra.css
+
   
 # Extensions
 markdown_extensions:
@@ -113,16 +117,4 @@ markdown_extensions:
 nav:
   - Home: index.md
   - Optimisation Methods:
-      - Overview: optimisation/optimisation-methods.md
       - Update Manager: optimisation/update-manager.md
-      - Object Pooling: optimisation/object-pooling.md
-  - Design Patterns:
-      - Overview: design-patterns/design-patterns.md
-      - Observer: design-patterns/observer.md
-      - Strategy: design-patterns/strategy.md
-  - User Interface:
-      - Overview: ui/user-interface.md
-      - Tweening: ui/tweening.md
-      - UI Toolkit: ui/uitk.md
-  - Gameplay Systems:
-      - Overview: gameplay/gameplay-systems.md

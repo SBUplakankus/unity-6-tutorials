@@ -1,14 +1,8 @@
 # **Unity 6 Tutorials**
 
-Welcome to the **Unity 6 Tutorial Series** by **Massive Melt Media**.
-
-This site is brand new and will be updated regularly throughout the year.  
-My goal is to release a new tutorial every Tuesday alongside work, coursework,
-and ongoing game development projects.
-
----
-
 ## **Site Overview**
+
+Welcome to the **Unity 6 Tutorial Series** by **Massive Melt Media**.
 
 This site accompanies the video tutorials on YouTube and provides:
 
@@ -17,17 +11,23 @@ This site accompanies the video tutorials on YouTube and provides:
 - Design rationale
 - Links to full source code
 
+
+!!! tip "Roadmap"
+      This site is brand new and will be updated regularly throughout the year.  
+      My goal is to release a new tutorial every Tuesday alongside work, coursework,
+      and ongoing game development projects.
+
 ---
 
-## **Site Contents**
+## **Planned Site Contents**
 
 
-| Section                                                      | Focus |  Experience Level |
-|:-------------------------------------------------------------|:------|:------------------|
-| [Optimisation Methods](optimisation/optimisation-methods.md) | Performance & scalability |  Intermediate |
-| [Design Patterns](design-patterns/design-patterns.md)        | Architecture & maintainability |  Intermediate / Advanced |
-| [User Interface](ui/user-interface.md)                       | Modern UI workflows |  Beginner / Intermediate |
-| [Gameplay Systems](gameplay/gameplay-systems.md)             | Core mechanics |  All levels |
+| Section                   | Focus |  Experience Level |
+|:--------------------------|:------|:------------------|
+| [Optimisation Methods](#) | Performance & scalability |  Intermediate |
+| [Design Patterns](#)      | Architecture & maintainability |  Intermediate / Advanced |
+| [User Interface](#)       | Modern UI workflows |  Beginner / Intermediate |
+| [Gameplay Systems](#)     | Core mechanics |  All levels |
 
 
 !!! tip "How to use the site"
