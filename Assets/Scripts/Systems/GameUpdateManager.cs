@@ -19,7 +19,7 @@ namespace Systems
        private float _mediumTimer;
        private float _lowTimer;
 
-       private void Iterate(List<IUpdateable> updates)
+       private static void Iterate(List<IUpdateable> updates)
        {
            for (int i = 0; i < updates.Count; i++)
                updates[i].OnUpdate(Time.deltaTime);

@@ -13,7 +13,7 @@ each frame.
 
 ## Tutorial Video
 
-Tutorial video for **Game Update Manager**.
+<iframe width="560" height="315" src="https://www.youtube.com/embed/j9i9_Yjt0u4?si=UT8zdubX-QNdA2oo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ---
 
@@ -176,37 +176,32 @@ the Update Priority which you define when registering.
             private const float LowPriorityInterval = 0.4f;
             private float _mediumPriorityTimer;
             private float _lowPriorityTimer;
-    
-            private void UpdateHighPriority()
+
+            private static void Iterate(List<IUpdateable> updates)
             {
-                for (var i = 0; i < _highPriorityUpdates.Count; i++)
-                {
-                    _highPriorityUpdates[i].OnUpdate(Time.deltaTime);
-                }
+                for (int i = 0; i < updates.Count; i++)
+                    updates[i].OnUpdate(Time.deltaTime);
             }
-    
-            private void UpdateMediumPriority()
+        
+            private void HighPriorityUpdate()
             {
-                _mediumPriorityTimer += Time.deltaTime;
-                if (!(_mediumPriorityTimer >= MediumPriorityInterval)) return;
-                
-                for (var i = 0; i < _mediumPriorityUpdates.Count; i++)
-                {
-                    _mediumPriorityUpdates[i].OnUpdate(_mediumPriorityTimer);
-                }
-                _mediumPriorityTimer = 0f;
+                Iterate(_highPriorityUpdates);
             }
-    
-            private void UpdateLowPriority()
+        
+            private void MediumPriorityUpdate()
             {
-                _lowPriorityTimer += Time.deltaTime;
-                if (!(_lowPriorityTimer >= LowPriorityInterval)) return;
-                
-                for (var i = 0; i < _lowPriorityUpdates.Count; i++)
-                {
-                    _lowPriorityUpdates[i].OnUpdate(_lowPriorityTimer);
-                }
-                _lowPriorityTimer = 0f;
+                _mediumTimer += Time.deltaTime;
+                if(_mediumTimer < MediumUpdateInterval) return;
+                Iterate(_mediumPriorityUpdates);
+                _mediumTimer = 0f;
+            }
+                    
+            private void LowPriorityUpdate()
+            {
+                _lowTimer += Time.deltaTime;
+                if(_lowTimer < LowUpdateInterval) return;
+                Iterate(_lowPriorityUpdates);
+                _lowTimer = 0f;
             }
 
             public void Register(IUpdateable updateable, UpdatePriority priority)
@@ -256,10 +251,10 @@ the Update Priority which you define when registering.
 
 ### Tutorial Video Source Files
 
-- [GameUpdateManager](#)
-- [IUpdateable](#)
-- [UpdatePriority](#)
-- [DemoController](#)
+- [GameUpdateManager](https://github.com/SBUplakankus/unity-6-tutorials/blob/main/Assets/Scripts/Systems/GameUpdateManager.cs)
+- [IUpdateable](https://github.com/SBUplakankus/unity-6-tutorials/blob/main/Assets/Scripts/Interfaces/IUpdateable.cs)
+- [UpdatePriority](https://github.com/SBUplakankus/unity-6-tutorials/blob/main/Assets/Scripts/Enums/UpdatePriority.cs)
+- [DemoController](https://github.com/SBUplakankus/unity-6-tutorials/blob/main/Assets/Scripts/Test/Components/TestMovement.cs)
 
 ---
 
