@@ -119,3 +119,5 @@ nav:
   - Home: index.md
   - Optimisation Methods:
       - Update Manager: optimisation/update-manager.md
+  - Design Patterns:
+      - Observer Pattern: design-patterns/observer.md
